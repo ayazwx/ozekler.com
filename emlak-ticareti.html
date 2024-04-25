@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,8 +9,9 @@
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="css/plugins.css" />
     <link rel="stylesheet" href="css/style.css" />
-    
+
 </head>
+
 <body>
     <!-- Preloader -->
     <div class="preloader-bg"></div>
@@ -31,27 +33,30 @@
             <div class="logo-wrapper">
                 <a class="logo" href="index.html"> <img src="img/logo-light.png" alt=""> </a>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="icon-bar"><i class="ti-menu"></i></span> </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="icon-bar"><i class="ti-menu"></i></span> </button>
             <!-- Navbar links -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
                     <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-                    <li class="nav-item dropdown"> <span class="nav-link">Projeler<i class="ti-angle-down"></i></span>
+
+                    <li class="nav-item dropdown"> <span class="nav-link active">Projeler<i
+                                class="ti-angle-down"></i></span>
                         <ul class="dropdown-menu last">
                             <li class="dropdown-item"><a href="insaat-sektoru.html">İnşaat Sektörü</a></li>
-                            <li class="dropdown-item"><a href="emlak-ticareti.html">Emlak Ticareti</a></li>
+                            <li class="dropdown-item active"><a href="emlak-ticareti.html">Emlak Ticareti</a></li>
                             <li class="dropdown-item">
-                  <a href="oto-galeri.html">Oto Galeri</a>
-                </li>
-                <li class="dropdown-item">
-                  <a href="oto-yikama.html">Oto Yıkama</a>
-                </li>
+                                <a href="oto-galeri.html">Oto Galeri</a>
+                            </li>
+                            <li class="dropdown-item">
+                                <a href="oto-yikama.html">Oto Yıkama</a>
+                            </li>
                         </ul>
                     </li>
                     
-                    
+
                     <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
                     <li class="nav-item"><a class="nav-link" href="/en">ENGLISH</a></li>
                 </ul>
@@ -59,67 +64,82 @@
         </div>
     </nav>
     <!-- Header Banner -->
-    <div class="banner-header section-padding valign bg-img bg-fixed" data-overlay-darkgray="4" data-background="img/slider/1.jpg">
+    <div class="banner-header section-padding valign bg-img bg-fixed" data-overlay-darkgray="4"
+        data-background="img/slider/1.jpg">
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center caption mt-90">
-                    <h1>Oto Galeri</h1>
-                    <h5><a href="services.html">Services</a> / Oto Galeri</h5>
+                    <h1>Our Projects</h1>
                 </div>
             </div>
         </div>
     </div>
     <!-- hr -->
     <hr class="line-vr-section">
-    <!-- Services -->
-    <div class="section-padding">
+    <!-- Project -->
+    <div class="savoye-project section-padding">
         <div class="container">
-            <div class="row">
-               <!-- Content -->
-                <div class="col-md-8">
-                    <p>Urban design nulla facilisi sedeuter nunc volutpat molli sapien veconseyer turpeutionyer mase libero sempe. Fusceler mollis augue sit amet hendrerit vestibulum. Duisteyerionyer venenatis lacus. Web gravida eros utturpis interdum ornare. Interdum et malesu they adamale fames ache urabitur arcu.</p>
-                    <p>Architectural nulla facilisi sedeuter nunc volutpat molli sapien veconseyer turpeutionyer mase libero sempe. Fusce mollis augue sit amet hendrerit vestibulum. Duisteyerionyer venenatis lacus.</p>
-                    <br>
-                    <div class="row align-items-stretch savoye-photos">
-                        <div class="col-md-6 items mb-30">
-                            <a href="img/services/1.jpg" class="d-block savoye-photo-item" data-caption="Özekler" data-fancybox="gallery"> <img src="img/services/1.jpg" alt="" class="img-fluid"> </a>
-                        </div>
-                        <div class="col-md-6 items mb-30">
-                            <a href="img/services/2.jpg" class="d-block savoye-photo-item" data-caption="Özekler" data-fancybox="gallery"> <img src="img/services/2.jpg" alt="" class="img-fluid"> </a>
-                        </div>
-                        <div class="col-md-12 items mb-30">
-                            <a href="img/slider/3.jpg" class="d-block savoye-photo-item" data-caption="Özekler" data-fancybox="gallery"> <img src="img/slider/3.jpg" alt="" class="img-fluid"> </a>
+            <div class="row text-center">
+                <ul class="savoye-project-filter">
+                    <li class="active" data-filter="*">All</li>
+                    <li data-filter=".urban">Oto Galeri</li>
+                    <li data-filter=".interior">Emlak Ticareti</li>
+                </ul>
+            </div>
+            <div class="row savoye-project-items">
+                <div class="col-md-6 single-item interior">
+                    <div class="savoye-project-wrap">
+                        <a href="oto-yikama.html"><img src="img/projects/1.jpg" alt=""></a>
+                        <div class="savoye-project-content">
+                            <p>Architecture</p>
+                            <h3><a href="oto-yikama.html">Bungalow Dark House</a></h3>
                         </div>
                     </div>
                 </div>
-                <!-- Sidebar -->
-                <div class="col-md-4 sidebar-side">
-                    <aside class="sidebar blog-sidebar">
-                        <div class="sidebar-widget services">
-                            <div class="widget-inner">
-                                <div class="sidebar-title">
-                                    <h5>All Services</h5>
-                                </div>
-                                <ul>
-                                    <li><a href="insaat-sektoru.html">İnşaat Sektörü</a></li>
-                                    <li><a href="emlak-ticareti.html">Emlak Ticareti</a></li>
-                                    <li class="active"><a href="oto-galeri.html">Oto Galeri</a></li>
-                                    <li><a href="3d-modelling.html">3D Modelling</a></li>
-                                    <li><a href="oto-yikama.html">Oto Yıkama</a></li>
-                                    <li><a href="planning.html">Planning</a></li>
-                                </ul>
-                            </div>
+                <div class="col-md-6 single-item urban">
+                    <div class="savoye-project-wrap">
+                        <a href="oto-yikama.html"><img src="img/projects/2.jpg" alt=""></a>
+                        <div class="savoye-project-content">
+                            <p>Architecture</p>
+                            <h3><a href="oto-yikama.html">Woodenist House<br>Lumberjack</a></h3>
                         </div>
-                        <div class="sidebar-widget help">
-                            <div class="widget-inner">
-                                <div class="sidebar-title">
-                                    <h5>Need Özekler Help?</h5>
-                                </div>
-                                <p>Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days. We will be happy to answer your questions. info@savoye.com</p>
-                                <div class="phone"><a href="tel:+11234560606"><i class="icon ti-tablet"></i>+1 123-456-0606</a></div>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 single-item interior">
+                    <div class="savoye-project-wrap">
+                        <a href="oto-yikama.html"><img src="img/projects/3.jpg" alt=""></a>
+                        <div class="savoye-project-content">
+                            <p>Exterior Design</p>
+                            <h3><a href="oto-yikama.html">Geometric Building</a></h3>
                         </div>
-                    </aside>
+                    </div>
+                </div>
+                <div class="col-md-6 single-item urban">
+                    <div class="savoye-project-wrap">
+                        <a href="oto-yikama.html"><img src="img/projects/4.jpg" alt=""></a>
+                        <div class="savoye-project-content">
+                            <p>Architecture</p>
+                            <h3><a href="oto-yikama.html">Arch Cloud Honna<br>Didenton Villa</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 single-item interior">
+                    <div class="savoye-project-wrap">
+                        <a href="oto-yikama.html"><img src="img/projects/5.jpg" alt=""></a>
+                        <div class="savoye-project-content">
+                            <p>Architecture</p>
+                            <h3><a href="oto-yikama.html">Brown Monara House<br>Ottova Canada</a></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 single-item urban">
+                    <div class="savoye-project-wrap">
+                        <a href="oto-yikama.html"><img src="img/projects/6.jpg" alt=""></a>
+                        <div class="savoye-project-content">
+                            <p>Architecture</p>
+                            <h3><a href="oto-yikama.html">Twin Forestland Home</a></h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,7 +148,8 @@
     <hr class="line-vr-section">
     <!-- Top Footer Banner -->
     <div class="topbanner-footer">
-        <div class="section-padding banner-img valign bg-img bg-fixed" data-overlay-darkgray="1" data-background="img/slider/1.jpg">
+        <div class="section-padding banner-img valign bg-img bg-fixed" data-overlay-darkgray="1"
+            data-background="img/slider/1.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mb-30 text-left caption">
@@ -152,7 +173,9 @@
                     </div>
                     <div class="col-md-3 offset-md-1">
                         <div class="vid-area">
-                            <a class="play-button gallery-masonry-item-img-link d-block" data-type="iframe" data-fancybox="iframe" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.758017847153!2d-79.93420398486563!3d32.77215479154045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe7a1ae84ff639%3A0xe5c782f71924a526!2s24%20King%20St%2C%20Charleston%2C%20SC%2029401%2C%20USA!5e0!3m2!1sen!2str!4v1631170502143!5m2!1sen!2str">
+                            <a class="play-button gallery-masonry-item-img-link d-block" data-type="iframe"
+                                data-fancybox="iframe"
+                                href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.758017847153!2d-79.93420398486563!3d32.77215479154045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe7a1ae84ff639%3A0xe5c782f71924a526!2s24%20King%20St%2C%20Charleston%2C%20SC%2029401%2C%20USA!5e0!3m2!1sen!2str!4v1631170502143!5m2!1sen!2str">
                                 <svg class="circle-fill">
                                     <circle cx="43" cy="43" r="39" stroke="#fff" stroke-width=".5"></circle>
                                 </svg>
@@ -176,7 +199,10 @@
                     <div class="item abot">
                         <div class="logo mb-15"> <img src="img/logo-light.png" alt=""> </div>
                         <p>Welcome to our Özekler agency. Viverra tristique justo in duis vitae diam neque niva.</p>
-                        <div class="social-icon"> <a href="index.html"><i class="ti-facebook"></i></a> <a href="index.html"><i class="ti-twitter"></i></a> <a href="index.html"><i class="ti-instagram"></i></a> <a href="index.html"><i class="ti-pinterest"></i></a> </div>
+                        <div class="social-icon"> <a href="index.html"><i class="ti-facebook"></i></a> <a
+                                href="index.html"><i class="ti-twitter"></i></a> <a href="index.html"><i
+                                    class="ti-instagram"></i></a> <a href="index.html"><i class="ti-pinterest"></i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4 offset-md-1 mb-30">
@@ -215,7 +241,8 @@
                     </div>
                     <div class="col-md-4">
                         <div class="text-right-left">
-                            <p><a href="oto-galeri.html#">Kullanım Koşulları</a> <span>|</span> <a href="oto-galeri.html#">Gizlilik Politikası</a></p>
+                            <p><a href="projects.html#">Kullanım Koşulları</a> <span>|</span> <a href="projects.html#">
+                                   Gizlilik Politikası</a></p>
                         </div>
                     </div>
                 </div>
@@ -238,4 +265,5 @@
     <script src="js/YouTubePopUp.js"></script>
     <script src="js/custom.js"></script>
 </body>
+
 </html>

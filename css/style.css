@@ -15,8 +15,8 @@
  14. About style 
  15. Team style
  16. Services style
- 17. Projects 1 style
- 18. Projects 2 style
+ 17. İnşaat Sektörü style
+ 18. Emlak Ticareti style
  19. Pricing style
  20. FAQS style
  21. Error Page 404 style
@@ -655,7 +655,7 @@ float: left;
     position: relative;
     padding: 15px 25px;
     /* padding-left: 45px; */
-    background: #272727;
+    /* background: #272727; */
 }
 .logo-wrapper .logo h2 {
     font-family: 'Khand', sans-serif;
@@ -1768,7 +1768,7 @@ float: left;
 }
 
 
-/* ======= Projects 1 style ======= */
+/* ======= İnşaat Sektörü style ======= */
 .savoye-project {}
 .savoye-project-section {
     padding-top: 120px;
@@ -2585,6 +2585,9 @@ line-height: 1em;
 
 
 /* ======= Homepage Blog style ======= */
+.blog {
+    /* display: none; */
+}
 .blog .item .post-img .img {
     overflow: hidden;
 }
