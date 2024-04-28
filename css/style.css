@@ -3758,3 +3758,7 @@ color: #fff;
 [data-overlay-light="10"]:before {
     opacity: 1;
 }
+
+.topbanner-footer .row {
+    gap: 20px;
+}
