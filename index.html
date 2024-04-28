@@ -286,7 +286,7 @@
       var projects = document.querySelector('#projects');
 
       async function getProjects() {
-          let response = await fetch('/img/projects/projects.json');
+          let response = await fetch('img/projects/projects.json');
           let data = await response.json();
 
          
@@ -299,7 +299,7 @@
                   div.classList.add('col-md-6', 'single-item', project.value);
                   div.innerHTML = `
                   <div class="savoye-project-wrap ${project.value}">
-                      <img src="/img/projects/insaat-sektoru/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
+                      <img src="img/projects/insaat-sektoru/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
                       <div class="savoye-project-content">
                       </div>
                   </div>
