@@ -3175,6 +3175,7 @@ color: #fff;
     transition: all 0.3s ease-out;
 }
 .main-footer .abot .social-icon {
+    display: none;
     margin-top: 20px;
 }
 .main-footer .abot .social-icon a {
