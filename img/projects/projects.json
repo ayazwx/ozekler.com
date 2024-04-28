@@ -1,0 +1,70 @@
+[
+    {
+        "name" : "Oto Yıkama",
+        "photosNum" : 39,
+        "type" :"jpeg",
+        "projects" : [
+            {
+                "name" : "Pasta Cila",
+                "value": "pastaCila",
+                "photoArray" : [24, 23, 22,21,20, 35,37]
+            },
+            {
+                "name" : "seramik Uygulama",
+                "value": "seramikUygulama",
+                "photoArray" : [12, 11, 9, 39, 40, 41]
+            },
+            {
+                "name" : "İç Temizlik",
+                "value": "icTemizlik",
+                "photoArray" : [13, 14, 28, 29, 30, 31, 32, 33, 34]
+            },
+            {
+                "name" : "Dış Temizlik",
+                "value": "disTemizlik",
+                "photoArray" : [15, 16, 17, 18, 19, 25, 26, 27]
+            }
+        ]
+    },
+    {
+        "name" : "Oto Galeri",
+        "photosNum" : 10,
+        "type" :"jpeg",
+        "projects" : [
+            {
+                "name" : "Tümü",
+                "value": "*",
+                "photoArray" : [1, 2, 3, 4, 5, 6, 7, 8, 10]
+            }
+        ]
+    },
+    {
+        "name": "Emlak Ticareti",
+        "photosNum" : 9,
+        "type" :"jpeg",
+        "projects" : [
+            {
+                "name" : "Tümü",
+                "value": "*",
+                "photoArray" : [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            }
+        ]
+    },
+    {
+        "name" : "İnşaat Sektörü",
+        "photosNum" : 39,
+        "type" :"jpeg",
+        "projects" : [
+            {
+                "name" : "İç renderlar",
+                "value": "icRenderlar",
+                "photoArray" : [3, 4, 5, 9, 10,11,17,18,19,22,23,30,31,38,39]
+            },
+            {
+                "name" : "Dış renderlar",
+                "value": "disRenderlar",
+                "photoArray" : [1, 2, 6, 7, 8, 12, 13, 14, 15, 16, 20, 21, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37]
+            }
+        ]
+    }
+]

@@ -42,7 +42,7 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Anasayfa</a></li>
                     <li class="nav-item"><a class="nav-link" href="hakkimizda.html">Hakkımızda</a></li>
 
-                    <li class="nav-item dropdown"> <span class="nav-link active">Projeler<i
+                    <li class="nav-item dropdown"> <span class="nav-link active">Çalışma Alanlarımız<i
                                 class="ti-angle-down"></i></span>
                         <ul class="dropdown-menu last">
                             <li class="dropdown-item"><a href="insaat-sektoru.html">İnşaat Sektörü</a></li>
@@ -69,7 +69,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center caption mt-90">
-                    <h1>Our Projects</h1>
+                    <h1>Oto Yıkama</h1>
                 </div>
             </div>
         </div>
@@ -80,68 +80,10 @@
     <div class="savoye-project section-padding">
         <div class="container">
             <div class="row text-center">
-                <ul class="savoye-project-filter">
-                    <li class="active" data-filter="*">All</li>
-                    <li data-filter=".urban">Oto Galeri</li>
-                    <li data-filter=".interior">Emlak Ticareti</li>
+                <ul class="savoye-project-filter" id="filters">
                 </ul>
             </div>
-            <div class="row savoye-project-items">
-                <div class="col-md-6 single-item interior">
-                    <div class="savoye-project-wrap">
-                        <a href="oto-yikama.html"><img src="img/projects/1.jpg" alt=""></a>
-                        <div class="savoye-project-content">
-                            <p>Architecture</p>
-                            <h3><a href="oto-yikama.html">Bungalow Dark House</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 single-item urban">
-                    <div class="savoye-project-wrap">
-                        <a href="oto-yikama.html"><img src="img/projects/2.jpg" alt=""></a>
-                        <div class="savoye-project-content">
-                            <p>Architecture</p>
-                            <h3><a href="oto-yikama.html">Woodenist House<br>Lumberjack</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 single-item interior">
-                    <div class="savoye-project-wrap">
-                        <a href="oto-yikama.html"><img src="img/projects/3.jpg" alt=""></a>
-                        <div class="savoye-project-content">
-                            <p>Exterior Design</p>
-                            <h3><a href="oto-yikama.html">Geometric Building</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 single-item urban">
-                    <div class="savoye-project-wrap">
-                        <a href="oto-yikama.html"><img src="img/projects/4.jpg" alt=""></a>
-                        <div class="savoye-project-content">
-                            <p>Architecture</p>
-                            <h3><a href="oto-yikama.html">Arch Cloud Honna<br>Didenton Villa</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 single-item interior">
-                    <div class="savoye-project-wrap">
-                        <a href="oto-yikama.html"><img src="img/projects/5.jpg" alt=""></a>
-                        <div class="savoye-project-content">
-                            <p>Architecture</p>
-                            <h3><a href="oto-yikama.html">Brown Monara House<br>Ottova Canada</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 single-item urban">
-                    <div class="savoye-project-wrap">
-                        <a href="oto-yikama.html"><img src="img/projects/6.jpg" alt=""></a>
-                        <div class="savoye-project-content">
-                            <p>Architecture</p>
-                            <h3><a href="oto-yikama.html">Twin Forestland Home</a></h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="row savoye-project-items" id="projects"></div>
         </div>
     </div>
     <!-- hr -->
@@ -249,6 +191,51 @@
             </div>
         </div>
     </footer>
+    <script>
+        var filters = document.querySelector('#filters');
+        var projects = document.querySelector('#projects');
+
+        async function getProjects() {
+            let response = await fetch('/img/projects/projects.json');
+            let data = await response.json();
+
+            let fragment = document.createDocumentFragment();
+
+            data[0].projects.forEach((filter, index) => {
+                let li = document.createElement('li');
+                li.setAttribute('data-filter', '.' + filter.value);
+                li.textContent = filter.name;
+                if (index == 0) {
+                    li.classList.add('active');
+                }
+
+                fragment.appendChild(li);
+            });
+            filters.appendChild(fragment);
+
+            let fragment2 = document.createDocumentFragment();
+
+            data[0].projects.forEach((project, index) => {
+                    project.photoArray.map((photo, index) => {
+                    let div = document.createElement('div');
+                    div.classList.add('col-md-6', 'single-item', project.value);
+                    div.innerHTML = `
+                    <div class="savoye-project-wrap ${project.value}">
+                        <img src="/img/projects/oto-yikama/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
+                        <div class="savoye-project-content">
+                            <h3>${project.name}</h3>
+                        </div>
+                    </div>
+                    `;
+                    fragment2.appendChild(div);
+                });
+                }
+            );
+            projects.appendChild(fragment2);
+        }
+        getProjects()
+
+    </script>
     <!-- jQuery -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
