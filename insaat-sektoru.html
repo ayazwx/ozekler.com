@@ -86,6 +86,51 @@
             <div class="row savoye-project-items" id="projects"></div>
         </div>
     </div>
+    <script>
+        var filters = document.querySelector('#filters');
+        var projects = document.querySelector('#projects');
+
+        async function getProjects() {
+            let response = await fetch('img/projects/projects.json');
+            let data = await response.json();
+
+            let fragment = document.createDocumentFragment();
+
+            data[3].projects.forEach((filter, index) => {
+                let li = document.createElement('li');
+                li.setAttribute('data-filter', '.' + filter.value);
+                li.textContent = filter.name;
+                if (index == 0) {
+                    li.classList.add('active');
+                }
+
+                fragment.appendChild(li);
+            });
+            filters.appendChild(fragment);
+
+            let fragment2 = document.createDocumentFragment();
+
+            data[3].projects.forEach((project, index) => {
+                    project.photoArray.map((photo, index) => {
+                    let div = document.createElement('div');
+                    div.classList.add('col-md-6', 'single-item', project.value);
+                    div.innerHTML = `
+                    <div class="savoye-project-wrap ${project.value}">
+                        <img src="img/projects/insaat-sektoru/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
+                        <div class="savoye-project-content">
+                            <h3>${project.name}</h3>
+                        </div>
+                    </div>
+                    `;
+                    fragment2.appendChild(div);
+                });
+                }
+            );
+            projects.appendChild(fragment2);
+        }
+        getProjects()
+
+    </script>
     <!-- hr -->
     <hr class="line-vr-section">
     <!-- Top Footer Banner -->
@@ -101,8 +146,10 @@
                 <div class="row">
                     <div class="col-md-4">
                         <h6>Telefon</h6>
-                        <h5 class="mb-30">+90 541 413 00 65</h5>
-                        <h5 class="mb-30">+90 546 938 6238 (Oto Yıkama)</h5>
+                        <h5 class="mb-30">+90 (535) 568 53 80 - Özcan ÖZEK</h5>
+                        <h5 class="mb-30">+90 (531) 914 56 77 - Faruk KOZAN </h5>
+                        <h5 class="mb-30">+90 (551) 018 15 42 - Oğuz ÖZEK </h5>
+                        <h5 class="mb-30">+90 (546) 938 62 38 - Özgür ÖZEK </h5>
                         <div class="social">
                           <a href="https://instagram.com/ozekler_insaatt"><i class="ti-instagram"></i></a>
                         </div>
@@ -168,8 +215,10 @@
                         </div>
                         <p>Aklınızda bir proje mi var?</p>
                         <p>Birlikte Harika Bir Şey İnşa Edelim</p>
-                        <p>+90 541 413 00 65 </p>
-                        <p>+90 546 938 6238 (Oto Yıkama)</p>
+                        <p>+90 (535) 568 53 80 - Özcan ÖZEK </p>
+                        <p>+90 (531) 914 56 77 - Faruk KOZAN </p>
+                        <p>+90 (551) 018 15 42 - Oğuz ÖZEK </p>
+                        <p>+90 (546) 938 62 38 - Özgür ÖZEK </p>
                         <p><a href='mailto:dogan.ozek.65@gmail.com' > dogan.ozek.65@gmail.com</a></p>
                     </div>
                 </div>
@@ -193,51 +242,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        var filters = document.querySelector('#filters');
-        var projects = document.querySelector('#projects');
-
-        async function getProjects() {
-            let response = await fetch('img/projects/projects.json');
-            let data = await response.json();
-
-            let fragment = document.createDocumentFragment();
-
-            data[3].projects.forEach((filter, index) => {
-                let li = document.createElement('li');
-                li.setAttribute('data-filter', '.' + filter.value);
-                li.textContent = filter.name;
-                if (index == 0) {
-                    li.classList.add('active');
-                }
-
-                fragment.appendChild(li);
-            });
-            filters.appendChild(fragment);
-
-            let fragment2 = document.createDocumentFragment();
-
-            data[3].projects.forEach((project, index) => {
-                    project.photoArray.map((photo, index) => {
-                    let div = document.createElement('div');
-                    div.classList.add('col-md-6', 'single-item', project.value);
-                    div.innerHTML = `
-                    <div class="savoye-project-wrap ${project.value}">
-                        <img src="img/projects/insaat-sektoru/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
-                        <div class="savoye-project-content">
-                            <h3>${project.name}</h3>
-                        </div>
-                    </div>
-                    `;
-                    fragment2.appendChild(div);
-                });
-                }
-            );
-            projects.appendChild(fragment2);
-        }
-        getProjects()
-
-    </script>
     <!-- jQuery -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.min.js"></script>
