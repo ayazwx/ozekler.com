@@ -22,7 +22,7 @@
 	<meta name="twitter:image" content="https://ozekler.com/img/twitter-card-image.jpg" />
     <meta name="twitter:site" content="@ozekler" />	
 
-    
+
     <link rel="shortcut icon" href="img/favicon.png" />
     <link rel="stylesheet" href="css/plugins.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -292,40 +292,100 @@
             <div class="section-title">Fotoğraflar</div>
           </div>
         </div>
-        <div class="row savoye-project-items" id="projects"></div>
+        <div class="row savoye-project-items" id="projects" style="position: relative; height: 3252.67px;"><div class="col-md-6 single-item ofisimiz" style="position: absolute; left: 0px; top: 0px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/1.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div><div class="col-md-6 single-item ofisimiz" style="position: absolute; top: 0px; left: 570px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/10.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div><div class="col-md-6 single-item ofisimiz" style="position: absolute; left: 0px; top: 427px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/3.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div><div class="col-md-6 single-item ofisimiz" style="position: absolute; left: 570px; top: 765px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/4.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div><div class="col-md-6 single-item ofisimiz" style="position: absolute; left: 0px; top: 1117px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/5.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div><div class="col-md-6 single-item ofisimiz" style="position: absolute; left: 570px; top: 1455px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/6.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div><div class="col-md-6 single-item ofisimiz" style="position: absolute; left: 0px; top: 1807px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/7.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div><div class="col-md-6 single-item ofisimiz" style="position: absolute; left: 570px; top: 2145px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/8.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div><div class="col-md-6 single-item ofisimiz" style="position: absolute; left: 0px; top: 2497px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/9.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div><div class="col-md-6 single-item ofisimiz" style="position: absolute; left: 570px; top: 2835px;">
+          <div class="savoye-project-wrap ofisimiz">
+              <img src="img/projects/home/2.jpeg" alt="">
+              <div class="savoye-project-content">
+              </div>
+          </div>
+          </div></div>
       </div>
     </div>
    
 
     <script>
-      var projects = document.querySelector('#projects');
+      // var projects = document.querySelector('#projects');
 
-      async function getProjects() {
-          let response = await fetch('img/projects/projects.json');
-          let data = await response.json();
+      // async function getProjects() {
+      //     let response = await fetch('img/projects/projects.json');
+      //     let data = await response.json();
 
          
 
-          let fragment2 = document.createDocumentFragment();
+      //     let fragment2 = document.createDocumentFragment();
 
-          data[4].projects.forEach((project, index) => {
-                  project.photoArray.map((photo, index) => {
-                  let div = document.createElement('div');
-                  div.classList.add('col-md-6', 'single-item', project.value);
-                  div.innerHTML = `
-                  <div class="savoye-project-wrap ${project.value}">
-                      <img src="img/projects/home/${photo < 10 ? `${photo}` : photo}.jpeg" alt="">
-                      <div class="savoye-project-content">
-                      </div>
-                  </div>
-                  `;
-                  fragment2.appendChild(div);
-              });
-              }
-          );
-          projects.appendChild(fragment2);
-      }
-      getProjects()
+      //     data[4].projects.forEach((project, index) => {
+      //             project.photoArray.map((photo, index) => {
+      //             let div = document.createElement('div');
+      //             div.classList.add('col-md-6', 'single-item', project.value);
+      //             div.innerHTML = `
+      //             <div class="savoye-project-wrap ${project.value}">
+      //                 <img src="img/projects/home/${photo < 10 ? `${photo}` : photo}.jpeg" alt="">
+      //                 <div class="savoye-project-content">
+      //                 </div>
+      //             </div>
+      //             `;
+      //             fragment2.appendChild(div);
+      //         });
+      //         }
+      //     );
+      //     projects.appendChild(fragment2);
+      // }
+      // getProjects()
 
   </script>
 

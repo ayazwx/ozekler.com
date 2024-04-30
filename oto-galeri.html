@@ -81,54 +81,138 @@
         <div class="container">
             <div class="row text-center">
                 <ul class="savoye-project-filter" id="filters">
-                </ul>
+                    <li data-filter=".*" class="active">Tümü</li></ul>
             </div>
-            <div class="row savoye-project-items" id="projects"></div>
+            <div class="row savoye-project-items" id="projects" style="position: relative; height: 3501.08px;"><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 0px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/11.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 0px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/12.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 592px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/13.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 830px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/01.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 1209px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/02.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 1241px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/03.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 1652px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/04.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 1685px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/05.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 2060px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/06.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 2249px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/07.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 2652px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/08.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 2875px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/oto-galeri/10.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div></div>
         </div>
     </div>
     <script>
-        var filters = document.querySelector('#filters');
-        var projects = document.querySelector('#projects');
+        // var filters = document.querySelector('#filters');
+        // var projects = document.querySelector('#projects');
 
-        async function getProjects() {
-            let response = await fetch('img/projects/projects.json');
-            let data = await response.json();
+        // async function getProjects() {
+        //     let response = await fetch('img/projects/projects.json');
+        //     let data = await response.json();
 
-            let fragment = document.createDocumentFragment();
+        //     let fragment = document.createDocumentFragment();
 
-            data[1].projects.forEach((filter, index) => {
-                let li = document.createElement('li');
-                li.setAttribute('data-filter', '.' + filter.value);
-                li.textContent = filter.name;
-                if (index == 0) {
-                    li.classList.add('active');
-                }
+        //     data[1].projects.forEach((filter, index) => {
+        //         let li = document.createElement('li');
+        //         li.setAttribute('data-filter', '.' + filter.value);
+        //         li.textContent = filter.name;
+        //         if (index == 0) {
+        //             li.classList.add('active');
+        //         }
 
-                fragment.appendChild(li);
-            });
-            filters.appendChild(fragment);
+        //         fragment.appendChild(li);
+        //     });
+        //     filters.appendChild(fragment);
 
-            let fragment2 = document.createDocumentFragment();
+        //     let fragment2 = document.createDocumentFragment();
 
-            data[1].projects.forEach((project, index) => {
-                project.photoArray.map((photo, index) => {
-                    let div = document.createElement('div');
-                    div.classList.add('col-md-6', 'single-item', project.value);
-                    div.innerHTML = `
-                    <div class="savoye-project-wrap ${project.value}">
-                        <img src="img/projects/oto-galeri/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
-                        <div class="savoye-project-content">
-                            <h3>${project.name}</h3>
-                        </div>
-                    </div>
-                    `;
-                    fragment2.appendChild(div);
-                });
-            }
-            );
-            projects.appendChild(fragment2);
-        }
-        getProjects()
+        //     data[1].projects.forEach((project, index) => {
+        //         project.photoArray.map((photo, index) => {
+        //             let div = document.createElement('div');
+        //             div.classList.add('col-md-6', 'single-item', project.value);
+        //             div.innerHTML = `
+        //             <div class="savoye-project-wrap ${project.value}">
+        //                 <img src="img/projects/oto-galeri/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
+        //                 <div class="savoye-project-content">
+        //                     <h3>${project.name}</h3>
+        //                 </div>
+        //             </div>
+        //             `;
+        //             fragment2.appendChild(div);
+        //         });
+        //     }
+        //     );
+        //     projects.appendChild(fragment2);
+        // }
+        // getProjects()
 
     </script>
     <!-- hr -->

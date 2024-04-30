@@ -81,54 +81,117 @@
         <div class="container">
             <div class="row text-center">
                 <ul class="savoye-project-filter" id="filters">
-                </ul>
+                    <li data-filter=".*" class="active">Tümü</li></ul>
             </div>
-            <div class="row savoye-project-items" id="projects"></div>
+            <div class="row savoye-project-items" id="projects" style="position: relative; height: 3900.49px;"><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 0px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/emlak-ticareti/01.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 0px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/emlak-ticareti/02.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 551px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/emlak-ticareti/03.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 671px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/emlak-ticareti/04.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 917px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/emlak-ticareti/05.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 1026px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/emlak-ticareti/06.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 1772px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/emlak-ticareti/07.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 570px; top: 2090px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/emlak-ticareti/08.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div><div class="col-md-6 single-item *" style="position: absolute; left: 0px; top: 2836px;">
+                <div class="savoye-project-wrap *">
+                    <img src="img/projects/emlak-ticareti/09.jpeg" alt="">
+                    <div class="savoye-project-content">
+                        <h3>Tümü</h3>
+                    </div>
+                </div>
+                </div></div>
         </div>
     </div>
     <script>
-        var filters = document.querySelector('#filters');
-        var projects = document.querySelector('#projects');
+        // var filters = document.querySelector('#filters');
+        // var projects = document.querySelector('#projects');
 
-        async function getProjects() {
-            let response = await fetch('img/projects/projects.json');
-            let data = await response.json();
+        // async function getProjects() {
+        //     let response = await fetch('img/projects/projects.json');
+        //     let data = await response.json();
 
-            let fragment = document.createDocumentFragment();
+        //     let fragment = document.createDocumentFragment();
 
-            data[2].projects.forEach((filter, index) => {
-                let li = document.createElement('li');
-                li.setAttribute('data-filter', '.' + filter.value);
-                li.textContent = filter.name;
-                if (index == 0) {
-                    li.classList.add('active');
-                }
+        //     data[2].projects.forEach((filter, index) => {
+        //         let li = document.createElement('li');
+        //         li.setAttribute('data-filter', '.' + filter.value);
+        //         li.textContent = filter.name;
+        //         if (index == 0) {
+        //             li.classList.add('active');
+        //         }
 
-                fragment.appendChild(li);
-            });
-            filters.appendChild(fragment);
+        //         fragment.appendChild(li);
+        //     });
+        //     filters.appendChild(fragment);
 
-            let fragment2 = document.createDocumentFragment();
+        //     let fragment2 = document.createDocumentFragment();
 
-            data[2].projects.forEach((project, index) => {
-                    project.photoArray.map((photo, index) => {
-                    let div = document.createElement('div');
-                    div.classList.add('col-md-6', 'single-item', project.value);
-                    div.innerHTML = `
-                    <div class="savoye-project-wrap ${project.value}">
-                        <img src="img/projects/emlak-ticareti/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
-                        <div class="savoye-project-content">
-                            <h3>${project.name}</h3>
-                        </div>
-                    </div>
-                    `;
-                    fragment2.appendChild(div);
-                });
-                }
-            );
-            projects.appendChild(fragment2);
-        }
-        getProjects()
+        //     data[2].projects.forEach((project, index) => {
+        //             project.photoArray.map((photo, index) => {
+        //             let div = document.createElement('div');
+        //             div.classList.add('col-md-6', 'single-item', project.value);
+        //             div.innerHTML = `
+        //             <div class="savoye-project-wrap ${project.value}">
+        //                 <img src="img/projects/emlak-ticareti/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
+        //                 <div class="savoye-project-content">
+        //                     <h3>${project.name}</h3>
+        //                 </div>
+        //             </div>
+        //             `;
+        //             fragment2.appendChild(div);
+        //         });
+        //         }
+        //     );
+        //     projects.appendChild(fragment2);
+        // }
+        // getProjects()
 
     </script>
     <!-- hr -->
