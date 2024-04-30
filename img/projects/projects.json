@@ -34,12 +34,12 @@
             {
                 "name" : "Tümü",
                 "value": "*",
-                "photoArray" : [1, 2, 3, 4, 5, 6, 7, 8, 10]
+                "photoArray" : [11,12,13,1, 2, 3, 4, 5, 6, 7, 8, 10]
             }
         ]
     },
     {
-        "name": "Emlak Ticareti",
+        "name": "Emlak Gayrimenkul",
         "photosNum" : 9,
         "type" :"jpeg",
         "projects" : [
@@ -56,14 +56,26 @@
         "type" :"jpeg",
         "projects" : [
             {
+                "name" : "Dış renderlar",
+                "value": "disRenderlar",
+                "photoArray" : [40,41,42,43,44,1, 2, 6, 7, 8, 12, 13, 14, 15, 16, 20, 21, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37]
+            },
+            {
                 "name" : "İç renderlar",
                 "value": "icRenderlar",
                 "photoArray" : [3, 4, 5, 9, 10,11,17,18,19,22,23,30,31,38,39]
-            },
+            }
+        ]
+    },
+    {
+        "name" : "OFİSİMİZ",
+        "photosNum" : 10,
+        "type" :"jpeg",
+        "projects" : [
             {
-                "name" : "Dış renderlar",
-                "value": "disRenderlar",
-                "photoArray" : [1, 2, 6, 7, 8, 12, 13, 14, 15, 16, 20, 21, 24, 25, 26, 27, 28, 29, 32, 33, 34, 35, 36, 37]
+                "name" : "OFİSİMİZ",
+                "value": "ofisimiz",
+                "photoArray" : [1, 10, 3, 4, 5, 6, 7, 8, 9, 2]
             }
         ]
     }

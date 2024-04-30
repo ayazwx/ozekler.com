@@ -70,7 +70,7 @@
                   <a href="insaat-sektoru.html">İnşaat Sektörü</a>
                 </li>
                 <li class="dropdown-item">
-                  <a href="emlak-ticareti.html">Emlak Ticareti</a>
+                  <a href="emlak-gayrimenkul.html">Emlak Gayrimenkul</a>
                 </li>
                 <li class="dropdown-item">
                   <a href="oto-galeri.html">Oto Galeri</a>
@@ -197,7 +197,7 @@
           </div>
           <div class="col-md-3">
             <div class="slider-services-box b-bottom">
-              <a href="emlak-ticareti.html">
+              <a href="emlak-gayrimenkul.html">
                 <div class="slider-services-box-info">
                   <img src="img/icons/2.png" class="services-icon" alt="" />
                   <h5>Emlak ticareti</h5>
@@ -293,13 +293,13 @@
 
           let fragment2 = document.createDocumentFragment();
 
-          data[3].projects.forEach((project, index) => {
+          data[4].projects.forEach((project, index) => {
                   project.photoArray.map((photo, index) => {
                   let div = document.createElement('div');
                   div.classList.add('col-md-6', 'single-item', project.value);
                   div.innerHTML = `
                   <div class="savoye-project-wrap ${project.value}">
-                      <img src="img/projects/insaat-sektoru/${photo < 10 ? `0${photo}` : photo}.jpeg" alt="">
+                      <img src="img/projects/home/${photo < 10 ? `${photo}` : photo}.jpeg" alt="">
                       <div class="savoye-project-content">
                       </div>
                   </div>
@@ -345,8 +345,8 @@
             </div>
             <div class="col-md-4">
               <h6>Email</h6>
-              <h5 class="mb-30">bilgi@ozekler.com</h5>
-              <p>Dere, Şht. Ömer Faydalı Cd. No:97, 77200 Yalova Merkez/Yalova</p>
+              <h5 class="mb-30"><a href='mailto:dogan.ozek.65@gmail.com' > dogan.ozek.65@gmail.com</a></h5>
+              <p>Adnan Menders Mah. Yaşar Kuş caddesi 54/A Özekler İnşaat Merkez/Yalova</p>
             </div>
             <div class="col-md-3 offset-md-1">
               <div class="vid-area">
@@ -415,7 +415,7 @@
                 <li>
                   <a href="insaat-sektoru.html">İnşaat Sektörü</a>
                 </li>
-                <li><a href="emlak-ticareti.html">Emlak Ticareti</a></li>
+                <li><a href="emlak-gayrimenkul.html">Emlak Gayrimenkul</a></li>
                 <li><a href="oto-galeri.html">Oto Galeri</a></li>
                 <li><a href="oto-yikama.html">Oto Yıkama</a></li>
               </ul>
@@ -430,7 +430,7 @@
               <p>Birlikte Harika Bir Şey İnşa Edelim</p>
               <p>+90 541 413 00 65 </p>
                         <p>+90 546 938 6238 (Oto Yıkama)</p>
-              <p>bilgi@ozekler.com</p>
+              <p><a href='mailto:dogan.ozek.65@gmail.com' > dogan.ozek.65@gmail.com</a></p>
             </div>
           </div>
         </div>
