@@ -3776,3 +3776,11 @@ color: #fff;
     bottom: 0;
     margin: 0;
 } */
+
+.social-icon {
+    display: none;
+}
+
+.instagram-logo {
+    width: 40px;
+}
